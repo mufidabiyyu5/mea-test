@@ -2,19 +2,20 @@ import React, { useEffect, useState } from "react";
 import '../styles/home.css'
 import { fetchData } from "../api/Data";
 import { useNavigate, Navigate } from "react-router-dom";
-import { isAuthenticated } from "../utils/Auth";
+import { isAuthenticated, getToken } from "../utils/Auth";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
     const [data, setData] = useState({});
     const navigate = useNavigate();
+    const user_id = getToken();
 
     useEffect(() => {
         fetch();
     }, []);
 
     const fetch = async () => {
-        const response = await fetchData('/user/335/courses/active');
+        const response = await fetchData(`/user/${user_id}/courses/active`);
         console.log(response);
 
         setData(response.data);
