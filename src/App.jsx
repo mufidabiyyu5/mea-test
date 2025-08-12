@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login/>} />
       <Route path="/home" element={<Home/>} />
-      <Route path="/course" element={isAuthenticated() ? <Detail/> : <Navigate to={'/'}/>} />
+      <Route path="/course" element={isAuthenticated ? <Detail/> : <Navigate to={'/'}/>} />
 
       {/* Add more routes as needed */}
       <Route path="*" element={<div>404 Not Found</div>} />
