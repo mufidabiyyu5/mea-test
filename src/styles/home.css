@@ -1,0 +1,116 @@
+body {
+    background-color: #5D707A;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  align-items: center;
+  position: relative;
+  background-color: #283137;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.btn-logout {
+    background-color: transparent;
+    font-size: 16px;
+    box-shadow: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-logout:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #d9824a;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    cursor: pointer !important;
+    background-color: #d97a4a;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px;
+  justify-content: center;
+}
+
+.course-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 16px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.course-image {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.course-item h2 {
+  font-size: 1.2rem;
+  margin: 12px 0 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.instructor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  border: 2px solid #eee;
+}
+
+.course-item h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+}
+
+.course-item span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .course-item {
+    max-width: 100%;
+  }
+}
