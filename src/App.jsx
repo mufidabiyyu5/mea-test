@@ -6,6 +6,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Detail from './pages/Detail'
+import { isAuthenticated } from './utils/Auth'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login/>} />
       <Route path="/home" element={<Home/>} />
-      <Route path="/course" element={<Detail/>} />
+      <Route path="/course" element={isAuthenticated() ? <Detail/> : <Navigate to={'/'}/>} />
 
       {/* Add more routes as needed */}
       <Route path="*" element={<div>404 Not Found</div>} />

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../styles/home.css'
 import { fetchData } from "../api/Data";
 import { useNavigate, Navigate } from "react-router-dom";
-import { isAuthenticated, logout } from "../utils/Auth";
+import { isAuthenticated } from "../utils/Auth";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -22,11 +22,6 @@ const Home = () => {
 
     const handleDetail = (id) => {
         navigate(`/course?course_id=${id}`);
-    }
-
-    const handleLogout = () => {
-        logout();
-        navigate('/');
     }
 
   return (
